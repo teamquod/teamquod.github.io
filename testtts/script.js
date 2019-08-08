@@ -14,7 +14,7 @@ var voices = [];
 function populateVoiceList() {
   voices = synth.getVoices();
   var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = '';
+  voiceSelect.innerHTML = 'Shit fucking happens';
   for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
@@ -35,7 +35,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onload = function(event) {
   event.preventDefault();
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
