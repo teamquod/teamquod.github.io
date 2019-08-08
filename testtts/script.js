@@ -14,7 +14,7 @@ var voices = [];
 function populateVoiceList() {
   voices = synth.getVoices();
   var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = 'Shit fucking happens';
+  voiceSelect.innerHTML = '';
   for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
