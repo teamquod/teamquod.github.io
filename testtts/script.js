@@ -35,6 +35,10 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
+$('document').ready(function() {
+  $('txt').val('Shit happens')
+})
+
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
